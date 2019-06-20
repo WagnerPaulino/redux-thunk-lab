@@ -34,13 +34,13 @@ class QuestionarioData extends Component {
         <div>
           <h1>Questionarios</h1>
           {this.state.data.map(d => (
-            <div>
+            <div key={d.index}>
               <hr></hr>
               <p>Nome: {d.nome}</p>
               <p>Tag: {d.tag}</p>
               <p>Descricao: {d.descricao}</p>
               <button>
-                <Link to="/edit">
+                <Link to={{pathname:"/edit", state:d.index }}>
                   Detalhes
                 </Link>
               </button>
