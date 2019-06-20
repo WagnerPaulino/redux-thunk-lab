@@ -1,15 +1,15 @@
-import { FETCH_GITHUB_DATA } from './types';
+import { FETCH_QUESTIONARIO_DATA } from './types';
 
-const apiUrl = 'https://question-for-study-service.herokuapp.com/api/questionarios/5';
+const apiUrl = 'https://question-for-study-service.herokuapp.com/api/questionarios/';
 
 export const fetchData = (data) => {
   return {
-    type: FETCH_GITHUB_DATA,
+    type: FETCH_QUESTIONARIO_DATA,
     data
   }
 };
 
-export const fetchGithubData = () => {
+export const fetchQuestionarioData = () => {
   return (dispatch) => {
     return fetch(apiUrl)
       .then(response => {

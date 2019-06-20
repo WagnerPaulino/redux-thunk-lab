@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import GithubData from './containers/GithubData';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <GithubData></GithubData>
+      <h1>Olá</h1>
+      {props.children}
     </div>
   );
 }
